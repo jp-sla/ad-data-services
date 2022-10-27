@@ -1,0 +1,24 @@
+{
+  "name": "ad-data-services",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:SearchLight-Advertising/ad-data-services.git",
+  "author": "jp",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "aws-login": "aws codeartifact login --tool npm --domain searchlight --repository symbol-js",
+    "lint": "eslint --color -f pretty --max-warnings 0 --ext .js .",
+    "deploy": "bash ./scripts/upload.sh",
+    "run-index": "node ./src/index.js"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.1",
+    "symbol-js": "^1.9.11"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.843.0",
+    "eslint": "^7.14.0",
+    "eslint-formatter-pretty": "^4.0.0"
+  }
+}

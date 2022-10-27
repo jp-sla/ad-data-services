@@ -1,0 +1,8 @@
+.DS_Store
+.idea
+node_modules
+.terraform
+.terraform.lock.hcl
+/css
+/target
+yarn-error.log
