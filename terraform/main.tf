@@ -1,4 +1,4 @@
-resource "aws_s3_bucket" "job_services" {
+resource "aws_s3_bucket" "ad_data_services" {
   bucket = "${local.account}-${local.name}"
   acl = "private"
 

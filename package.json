@@ -13,11 +13,12 @@
     "run-index": "node ./src/index.js"
   },
   "dependencies": {
-    "node-fetch": "^2.6.1",
+    "csv-parse": "^5.3.1",
+    "node-fetch": "^3.2.10",
     "symbol-js": "^1.9.11"
   },
   "devDependencies": {
-    "aws-sdk": "^2.843.0",
+    "aws-sdk": "^2.1241.0",
     "eslint": "^7.14.0",
     "eslint-formatter-pretty": "^4.0.0"
   }
