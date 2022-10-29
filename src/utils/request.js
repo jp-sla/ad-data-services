@@ -103,7 +103,9 @@ const cachedRequest = (parts, params, cb) => map(
     )
 );
 
-const requestDigital = (...args) => error(`requestDigital called with...\n${pprint(args)}`);
+const requestDigital = (parts, params) => fetchUri(
+  getDigitalUri(parts, params)
+);
 
 const requestMatching = (account, type, source, startTs, endTs) => Promise.all(
   dedupe([startTs, endTs].map(formatUtcMonthPartition)).map(

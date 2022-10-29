@@ -1,6 +1,7 @@
 const { map, pprint, logInfo } = require('symbol-js');
 
 const { handler: fluencySpendHandler } = require('./fluency-spend.js');
+const { handler: fluencyRecordsHandler } = require('./fluency-records.js');
 
 const { fromEntries } = Object;
 
@@ -23,6 +24,13 @@ const HANDLER_CONFIG = {
   'fluency-spend': {
     handler: fluencySpendHandler,
     getEvent: compose(nameAs('accounts', 'start', 'end'), queryStringParameters)
+  },
+  'fluency-records': {
+    handler: fluencyRecordsHandler,
+    getEvent: (account, start, end) => ({
+      pathParameters: { account },
+      queryStringParameters: { start, end }
+    })
   }
 };
 

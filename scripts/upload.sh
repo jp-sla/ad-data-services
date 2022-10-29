@@ -30,28 +30,9 @@ yarn install
 
 aws lambda update-function-code \
     --s3-bucket $BUCKET --s3-key $SERVICE_KEY \
-    --function-name ad-data-services-interval-day-ranges
+    --function-name ad-data-services-fluency-records
 
 aws lambda update-function-code \
     --s3-bucket $BUCKET --s3-key $SERVICE_KEY \
-    --function-name ad-data-services-customer-summaries
+    --function-name ad-data-services-fluency-spend
 
-aws lambda update-function-code \
-    --s3-bucket $BUCKET --s3-key $SERVICE_KEY \
-    --function-name ad-data-services-summaries
-
-aws lambda update-function-code \
-    --s3-bucket $BUCKET --s3-key $SERVICE_KEY \
-    --function-name ad-data-services-jobs
-
-aws lambda update-function-code \
-    --s3-bucket $BUCKET --s3-key $SERVICE_KEY \
-    --function-name ad-data-services-estimates
-
-aws lambda update-function-code \
-    --s3-bucket $BUCKET --s3-key $SERVICE_KEY \
-    --function-name ad-data-services-customer-job-records
-
-aws lambda update-function-code \
-    --s3-bucket $BUCKET --s3-key $SERVICE_KEY \
-    --function-name ad-data-services-summaries-count

@@ -51,6 +51,10 @@ const getUtcStartOfHour = (ts, offset = 0) => map(
   getUtcHourValues(ts), ([y, m, d, h]) => utc(y, m, d, h + offset)
 );
 
+const getUtcStartOfMonth = (ts, offset = 0) => map(
+  getUtcMonthValues(ts), ([y, m]) => utc(y, m + offset)
+);
+
 const getDayValues = ts => map(date(ts), d => [d.getFullYear(), d.getMonth(), d.getDate()]);
 
 const getStartOfDay = (ts, offset = 0) => map(getDayValues(ts), ([y, m, d]) => time(y, m, d + offset));
@@ -194,6 +198,7 @@ module.exports = {
   getUtcStartOfDay,
   getUtcBufferedStartOfDay,
   getUtcStartOfHour,
+  getUtcStartOfMonth,
   getStartOfDay,
   parseUtcDay,
   toIsoString,
